@@ -1,0 +1,12 @@
+//Structuring the layout
+.app__container {
+  height: 100vh;
+  @include full-flex;
+  aside {
+    height: 100%;
+    width: 20%;
+  }
+  .page__container {
+    width: 80%;
+  }
+}
