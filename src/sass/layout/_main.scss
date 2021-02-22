@@ -8,5 +8,9 @@
   }
   .page__container {
     width: 80%;
+    .changable {
+      height: 70%;
+      background-color: $primary-color;
+    }
   }
 }

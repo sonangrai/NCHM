@@ -1,7 +1,7 @@
 aside {
   .top__aside {
     background-color: $dark-color;
-    height: 80%;
+    height: 85%;
     padding: 2em;
     display: flex;
     flex-direction: column;
@@ -32,7 +32,7 @@ aside {
     }
   }
   .bottom__aside {
-    height: 20%;
+    height: 15%;
     padding: 2em;
     @include flexer(flex-start, center);
     .wrap {

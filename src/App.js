@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import Sidebar from "./components/layouts/Sidebar";
 import Home from "./components/pages/Home";
 import Header from "./components/layouts/Header";
+import Footer from "./components/layouts/Footer";
 
 function App() {
   return (
@@ -17,9 +18,12 @@ function App() {
           <Sidebar />
           <div className="page__container">
             <Header />
-            <Switch>
-              <Route path="/" component={Home} />
-            </Switch>
+            <div className="changable">
+              <Switch>
+                <Route path="/" component={Home} />
+              </Switch>
+            </div>
+            <Footer />
           </div>
         </div>
       </Router>
