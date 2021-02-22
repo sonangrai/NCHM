@@ -1,0 +1,39 @@
+.header {
+  padding: 2em;
+  background-color: $primary-color;
+  .header__row {
+    @include flexer(space-between, center);
+    .search {
+      input {
+        padding: 0.8em;
+        border: 0;
+        border-radius: 24px;
+        background-color: $secondary-color;
+        color: #fff;
+        width: 300px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .sec__nav {
+      nav {
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          li {
+            margin-left: 2em;
+            &:first-child {
+              margin-left: 0;
+            }
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
