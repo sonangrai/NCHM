@@ -7,7 +7,7 @@ const SidebarNav = () => {
       <div className="nav__row">
         <div className="nav__item">
           <div className="nav__item__row has-child">
-            <Link>
+            <Link to="/courses">
               <span>Courses</span>
               <span>+</span>
             </Link>
@@ -15,7 +15,7 @@ const SidebarNav = () => {
         </div>
         <div className="nav__item">
           <div className="nav__item__row has-child">
-            <Link>
+            <Link to="/study">
               <span>Study With Us</span>
               <span>+</span>
             </Link>
@@ -23,7 +23,7 @@ const SidebarNav = () => {
         </div>
         <div className="nav__item">
           <div className="nav__item__row has-child">
-            <Link>
+            <Link to="/international">
               <span>International</span>
               <span>+</span>
             </Link>
@@ -31,7 +31,7 @@ const SidebarNav = () => {
         </div>
         <div className="nav__item">
           <div className="nav__item__row has-child">
-            <Link>
+            <Link to="industry">
               <span>Industry</span>
               <span>+</span>
             </Link>
@@ -39,14 +39,14 @@ const SidebarNav = () => {
         </div>
         <div className="nav__item">
           <div className="nav__item__row">
-            <Link>
+            <Link to="dine">
               <span>Dine & Conference</span>
             </Link>
           </div>
         </div>
         <div className="nav__item">
           <div className="nav__item__row">
-            <Link>
+            <Link to="/short">
               <span>Short Courses</span>
             </Link>
           </div>
