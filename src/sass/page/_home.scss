@@ -1,0 +1,45 @@
+.slider__container {
+  padding: 2em;
+  height: 70vh;
+  overflow-y: scroll;
+  position: relative;
+  .slider__item {
+    @include full-flex;
+    justify-content: space-between;
+    height: 100%;
+    .slider__actions {
+      width: 20%;
+      .desc {
+        color: #fff;
+        h2 {
+          margin: 0;
+        }
+      }
+    }
+    .poster {
+      width: 70%;
+    }
+  }
+  .slider__nav {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    @include full-flex;
+    .previous__btn,
+    .next__btn {
+      background-color: transparent;
+      width: 60px;
+      height: 60px;
+      @include flexer(center, center);
+      border: 2px solid #fff;
+      border-radius: 50%;
+      &:focus {
+        outline: 0;
+      }
+    }
+    .next__btn {
+      background-color: #fff;
+      margin-left: 1em;
+    }
+  }
+}
