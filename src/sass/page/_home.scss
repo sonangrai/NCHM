@@ -5,6 +5,7 @@
   position: relative;
   .slider__item {
     @include full-flex;
+    display: flex !important;
     justify-content: space-between;
     height: 100%;
     .slider__actions {
@@ -18,21 +19,37 @@
     }
     .poster {
       width: 70%;
+      img {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+      }
     }
   }
-  .slider__nav {
-    position: absolute;
-    left: 5%;
-    bottom: 5%;
-    @include full-flex;
+  .slick-slider {
+    .slick-slide {
+      padding: 0 10px;
+      div {
+        :focus {
+          outline: none !important;
+        }
+      }
+    }
+    button {
+      position: absolute;
+    }
     .previous__btn,
     .next__btn {
       background-color: transparent;
-      width: 50px;
-      height: 50px;
+      width: 60px;
+      height: 60px;
       @include flexer(center, center);
       border: 2px solid #fff;
       border-radius: 50%;
+      left: 5%;
+      bottom: 0;
+      z-index: 2;
+      cursor: pointer;
       &:focus {
         outline: 0;
       }
@@ -40,6 +57,8 @@
     .next__btn {
       background-color: #fff;
       margin-left: 1em;
+      left: 10%;
+      bottom: 0;
     }
   }
 }
