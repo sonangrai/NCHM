@@ -53,7 +53,26 @@ const Home = () => {
                 </div>
               </div>
               <div className="poster">
-                <img src={data.image} alt="" />
+                <div className="box__row">
+                  <div className="box__item">
+                    <img src={data.image} alt="" />
+                  </div>
+                  <div className="box__item">
+                    <img src={data.image} alt="" />
+                  </div>
+                  <div className="box__item">
+                    <img src={data.image} alt="" />
+                  </div>
+                  <div className="box__item">
+                    <img src={data.image} alt="" />
+                  </div>
+                  <div className="box__item">
+                    <img src={data.image} alt="" />
+                  </div>
+                  <div className="box__item not__empty">
+                    <span>Tourism</span>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
