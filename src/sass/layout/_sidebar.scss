@@ -2,11 +2,11 @@ aside {
   .top__aside {
     background-color: $dark-color;
     height: 85%;
-    padding: 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     .logo {
+      padding: 2em;
       span {
         svg {
           width: 130px;
@@ -14,6 +14,8 @@ aside {
       }
     }
     .nav {
+      padding: 2em;
+      overflow-y: scroll;
       .nav__row {
         padding: 1em 0;
         .nav__item {
@@ -26,6 +28,57 @@ aside {
             justify-content: space-between;
             color: #fff;
             font-size: 1.2em;
+          }
+          .has__child {
+            position: relative;
+            &:after {
+              position: absolute;
+              content: "+";
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              color: #fff;
+            }
+            .dropped__box {
+              height: 0;
+              overflow: hidden;
+              opacity: 0;
+              transition: 0.3s;
+              border: 1px solid #656363;
+              border-radius: 12px;
+              ul {
+                margin: 0;
+                padding: 1em;
+                list-style: none;
+                li {
+                  padding: 0.8em 0;
+                  border-bottom: 1px solid #656363;
+                  &:last-child {
+                    border: 0;
+                    padding-bottom: 0;
+                  }
+                  &:first-child {
+                    padding-top: 0;
+                  }
+                }
+              }
+            }
+            a {
+              span {
+                pointer-events: none;
+              }
+            }
+          }
+          .has__child.show {
+            &:after {
+              content: "-";
+              top: 5%;
+            }
+            .dropped__box {
+              height: auto;
+              opacity: 1;
+              margin-top: 1em;
+            }
           }
         }
       }
