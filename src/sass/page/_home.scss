@@ -1,7 +1,5 @@
 .slider__container {
   padding: 2em;
-  height: 70vh;
-  overflow-y: scroll;
   position: relative;
   .slider__item {
     @include full-flex;

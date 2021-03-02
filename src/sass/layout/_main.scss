@@ -1,17 +1,15 @@
 //Structuring the layout
 .app__container {
-  height: 100vh;
-  @include full-flex;
   aside {
-    height: 100%;
+    height: 100vh;
     width: 20%;
+    position: fixed;
   }
   .page__container {
-    height: 100vh;
-    width: 80%;
+    margin-left: 20%;
     .changable {
-      height: 70%;
       background-color: $primary-color;
+      min-height: 75vh;
     }
   }
 }
