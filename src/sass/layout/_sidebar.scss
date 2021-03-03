@@ -119,6 +119,7 @@ aside {
     }
   }
   .mob__togg {
+    display: none;
     position: absolute;
     left: 100%;
     top: 4%;
@@ -143,6 +144,9 @@ aside {
         opacity: 1;
         transition: 0.3s;
       }
+    }
+    @include lg {
+      display: block;
     }
   }
   .mob__togg.show {

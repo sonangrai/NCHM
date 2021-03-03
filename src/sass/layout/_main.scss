@@ -13,6 +13,10 @@
     @include lg {
       left: -25%;
     }
+    @include md {
+      width: 40%;
+      left: -40%;
+    }
   }
   aside.show {
     left: 0;

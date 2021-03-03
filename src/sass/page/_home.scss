@@ -14,6 +14,9 @@
           margin: 0;
         }
       }
+      @include md {
+        width: 100%;
+      }
     }
     .poster {
       width: 70%;
@@ -55,6 +58,9 @@
           }
         }
       }
+      @include md {
+        width: 100%;
+      }
     }
   }
   .slick-slider {
@@ -64,6 +70,14 @@
         :focus {
           outline: none !important;
         }
+      }
+      @include md {
+        padding: 0;
+      }
+    }
+    .slick-list {
+      @include md {
+        padding-bottom: 3em;
       }
     }
     button {
@@ -92,12 +106,18 @@
         width: 40px;
         height: 40px;
       }
+      @include md {
+        left: 0;
+      }
     }
     .next__btn {
       background-color: #fff;
       margin-left: 1em;
       left: 10%;
       bottom: 0;
+      @include md {
+        left: 5%;
+      }
     }
   }
 }
