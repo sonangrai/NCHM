@@ -27,6 +27,12 @@
         border-radius: 18px;
         @include full-flex;
         justify-content: space-between;
+        @include sm {
+          height: 40vh;
+        }
+        @include xsm {
+          height: 30vh;
+        }
         .box__item {
           width: calc((100% / 3) - 10px);
           overflow: hidden;
@@ -108,6 +114,18 @@
       }
       @include md {
         left: 0;
+      }
+      @include sm {
+        width: 30px;
+        height: 30px;
+        svg {
+          width: 10px;
+          height: 10px;
+        }
+      }
+      @include xsm {
+        width: 20px;
+        height: 20px;
       }
     }
     .next__btn {

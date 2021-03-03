@@ -3,7 +3,14 @@
   background-color: $primary-color;
   .header__row {
     @include flexer(space-between, center);
+    @include sm {
+      flex-wrap: wrap;
+    }
     .search {
+      @include sm {
+        width: 100%;
+        @include flexer(flex-end, center);
+      }
       input {
         padding: 0.8em;
         border: 0;
@@ -17,9 +24,18 @@
         @include lg {
           margin-left: 4em;
         }
+        @include md {
+          margin-left: 2em;
+          width: 200px;
+        }
       }
     }
     .sec__nav {
+      @include sm {
+        width: 100%;
+        @include flexer(flex-end, center);
+        margin-top: 0.5em;
+      }
       nav {
         ul {
           margin: 0;
@@ -28,11 +44,17 @@
           display: flex;
           li {
             margin-left: 2em;
+            @include md {
+              margin-left: 1em;
+            }
             &:first-child {
               margin-left: 0;
             }
             a {
               color: #fff;
+              @include md {
+                font-size: 0.8em;
+              }
             }
           }
         }
