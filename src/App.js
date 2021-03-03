@@ -6,6 +6,7 @@ import Sidebar from "./components/layouts/Sidebar";
 import Home from "./components/pages/Home";
 import Header from "./components/layouts/Header";
 import Footer from "./components/layouts/Footer";
+import Contact from "./components/pages/Contact";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
             <Header />
             <div className="changable">
               <Switch>
-                <Route path="/" component={Home} />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/contacts" component={Contact} />
               </Switch>
             </div>
             <Footer />

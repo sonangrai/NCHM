@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import SidebarNav from "./SidebarNav";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   let date = new Date();
+
+  const [menu, setmenu] = useState("hidden");
+
+  const toggleMenu = (e) => {
+    e.currentTarget.classList.toggle("show");
+    //Toggleing the aside menu for the sliding
+    setmenu(() => {
+      if (menu === "hidden") {
+        return "show";
+      } else {
+        return "hidden";
+      }
+    });
+  };
+
   return (
     <>
-      <aside>
+      <aside className={menu}>
         <div className="top__aside">
           <div className="logo">
-            <span>
+            <Link to="/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="130.72"
@@ -172,7 +188,7 @@ const Sidebar = () => {
                   />
                 </g>
               </svg>
-            </span>
+            </Link>
           </div>
           <div className="nav">
             <SidebarNav />
@@ -263,6 +279,36 @@ const Sidebar = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="mob__togg" onClick={toggleMenu}>
+          <span className="close__open">
+            <svg
+              className="open"
+              xmlns="http://www.w3.org/2000/svg"
+              height="384pt"
+              viewBox="0 -53 384 384"
+              width="384pt"
+            >
+              <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
+              <path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
+              <path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              id="Capa_1"
+              x="0px"
+              y="0px"
+              viewBox="0 0 512.001 512.001"
+              className="close"
+            >
+              <g>
+                <g>
+                  <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717    L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859    c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287    l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285    L284.286,256.002z" />
+                </g>
+              </g>
+            </svg>
+          </span>
         </div>
       </aside>
     </>

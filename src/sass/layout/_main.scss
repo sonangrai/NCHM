@@ -4,12 +4,30 @@
     height: 100vh;
     width: 20%;
     position: fixed;
+    z-index: 99;
+    left: 0;
+    transition: 0.3s;
+    @include xl {
+      width: 25%;
+    }
+    @include lg {
+      left: -25%;
+    }
+  }
+  aside.show {
+    left: 0;
   }
   .page__container {
     margin-left: 20%;
     .changable {
       background-color: $primary-color;
       min-height: 75vh;
+    }
+    @include xl {
+      margin-left: 25%;
+    }
+    @include lg {
+      margin-left: 0;
     }
   }
 }
