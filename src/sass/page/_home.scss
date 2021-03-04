@@ -55,6 +55,9 @@
           &:nth-child(6) {
             border-bottom-right-radius: 18px;
           }
+          @include sm {
+            width: calc((100% / 3) - 6px);
+          }
         }
         .not__empty {
           background-color: #fff;

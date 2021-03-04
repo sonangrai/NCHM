@@ -57,3 +57,22 @@ $xxl: 1400px;
   justify-content: $justify;
   align-items: $align;
 }
+
+//Button
+@mixin pr-btn {
+  padding: 1em 1.4em;
+  border: 0;
+  background-color: #fff;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 600;
+  color: $primary-color;
+  cursor: pointer;
+  transition: 0.4s;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    border-radius: 24px;
+  }
+}

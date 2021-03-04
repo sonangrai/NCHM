@@ -7,9 +7,12 @@ aside {
     justify-content: space-evenly;
     .logo {
       padding: 2em;
-      span {
+      a {
         svg {
           width: 130px;
+          @include sm {
+            width: 100px;
+          }
         }
       }
     }
