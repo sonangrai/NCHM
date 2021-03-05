@@ -3,8 +3,8 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import NextBtn from "./NextBtn";
-import PreviousBtn from "./PreviousBtn";
+import NextBtn from "../layouts/NextBtn";
+import PreviousBtn from "../layouts/PreviousBtn";
 
 const Home = () => {
   const datas = [

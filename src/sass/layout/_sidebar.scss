@@ -19,6 +19,7 @@ aside {
     .nav {
       padding: 2em;
       overflow-y: scroll;
+      scrollbar-width: thin;
       .nav__row {
         padding: 1em 0;
         .nav__item {
@@ -47,7 +48,7 @@ aside {
               overflow: hidden;
               opacity: 0;
               transition: 0.3s;
-              border: 1px solid #656363;
+              border: 1px solid #3c3c3c;
               border-radius: 12px;
               ul {
                 margin: 0;
@@ -55,13 +56,16 @@ aside {
                 list-style: none;
                 li {
                   padding: 0.8em 0;
-                  border-bottom: 1px solid #656363;
+                  border-bottom: 1px solid #3c3c3c;
                   &:last-child {
                     border: 0;
                     padding-bottom: 0;
                   }
                   &:first-child {
                     padding-top: 0;
+                  }
+                  a {
+                    font-size: 0.9em;
                   }
                 }
               }

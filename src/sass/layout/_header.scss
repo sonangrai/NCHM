@@ -11,22 +11,42 @@
         width: 100%;
         @include flexer(flex-end, center);
       }
-      input {
+      form {
+        @include flexer(center, center);
         padding: 0.8em;
-        border: 0;
         border-radius: 24px;
         background-color: $secondary-color;
-        color: #fff;
-        width: 300px;
-        &:focus {
-          outline: none;
+        input {
+          color: #fff;
+          border: 0;
+          width: 300px;
+          background-color: transparent;
+          &:focus {
+            outline: none;
+          }
+          @include lg {
+            margin-left: 4em;
+          }
+          @include md {
+            margin-left: 2em;
+            width: 200px;
+          }
         }
-        @include lg {
-          margin-left: 4em;
-        }
-        @include md {
-          margin-left: 2em;
-          width: 200px;
+        button {
+          background-color: transparent;
+          border: 0;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+          svg {
+            width: 1.5em;
+            height: 1.5em;
+            circle,
+            line {
+              stroke: #fff;
+            }
+          }
         }
       }
     }
