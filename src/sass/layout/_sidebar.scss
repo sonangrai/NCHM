@@ -6,7 +6,7 @@ aside {
     flex-direction: column;
     justify-content: space-evenly;
     .logo {
-      padding: 2em;
+      padding: 0 2em;
       a {
         svg {
           width: 130px;
@@ -17,7 +17,7 @@ aside {
       }
     }
     .nav {
-      padding: 2em;
+      padding: 0 2em;
       overflow-y: scroll;
       scrollbar-width: thin;
       .nav__row {
@@ -90,6 +90,17 @@ aside {
         }
       }
     }
+    .auth__box {
+      padding: 0 2em;
+      a {
+        display: block;
+        color: #fff;
+        text-align: center;
+        &:last-child {
+          margin-top: 1em;
+        }
+      }
+    }
   }
   .bottom__aside {
     height: 15%;
@@ -129,8 +140,11 @@ aside {
     display: none;
     position: absolute;
     left: 100%;
-    top: 4%;
+    top: 5%;
     background: $dark-color;
+    @include sm {
+      top: 7%;
+    }
     span {
       @include flexer(center, center);
       height: 50px;

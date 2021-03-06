@@ -1,6 +1,8 @@
 .slider__container {
   padding: 2em;
   position: relative;
+  background-color: $primary-color;
+  min-height: 75vh;
   .slider__item {
     @include full-flex;
     display: flex !important;

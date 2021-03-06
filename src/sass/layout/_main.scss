@@ -28,7 +28,6 @@
   .page__container {
     margin-left: 20%;
     .changable {
-      background-color: $primary-color;
       min-height: 75vh;
     }
     @include xl {

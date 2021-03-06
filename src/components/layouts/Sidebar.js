@@ -193,6 +193,12 @@ const Sidebar = () => {
           <div className="nav">
             <SidebarNav />
           </div>
+          <div className="auth__box">
+            <Link to="/login" className="sub__btn__outline">
+              Login
+            </Link>
+            <Link to="/register">Student Register | Signup</Link>
+          </div>
         </div>
         <div className="bottom__aside">
           <div className="wrap">

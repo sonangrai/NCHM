@@ -1,0 +1,48 @@
+.about__pg {
+  padding: 2em;
+  background-color: #fff;
+  .about__row {
+    @include full-flex;
+    justify-content: space-between;
+    .left__part {
+      width: 78%;
+      @include xl {
+        width: 68%;
+      }
+      @include md {
+        width: 100%;
+      }
+    }
+    .right__part {
+      width: 20%;
+      @include xl {
+        width: 30%;
+      }
+      @include md {
+        width: 100%;
+      }
+      .button__cont {
+        @include md {
+          @include full-flex;
+          justify-content: space-between;
+        }
+        a {
+          display: block;
+          margin-bottom: 1em;
+          &:last-child {
+            margin-bottom: 0;
+            @include md {
+              margin-bottom: 1em;
+            }
+          }
+          @include md {
+            width: 48%;
+          }
+          @include sm {
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}

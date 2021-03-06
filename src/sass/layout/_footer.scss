@@ -1,8 +1,21 @@
 .footer {
   padding: 2em;
   background-color: $secondary-color;
-  @include flexer(flex-end, center);
+  @include flexer(space-between, center);
   span {
     color: #fff;
+    a {
+      color: #fff;
+    }
   }
+}
+
+.float__notice {
+  display: none;
+  position: absolute;
+  left: -100%;
+  bottom: 0;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
 }

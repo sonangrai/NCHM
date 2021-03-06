@@ -3,6 +3,7 @@
   justify-content: space-between;
   padding: 2em;
   min-height: 75vh;
+  background-color: #fff;
   .left__cont {
     @include flexer(space-evenly, flex-start);
     flex-direction: column;
@@ -14,11 +15,7 @@
     .upper {
       h3 {
         font-size: 2em;
-        color: #fff;
         margin: 0;
-      }
-      p {
-        color: #fff;
       }
     }
     .lower {
@@ -28,13 +25,13 @@
         list-style: none;
         li {
           a {
-            color: #fff;
             text-decoration: none;
             font-size: 0.8em;
+            color: $primary-color;
             svg {
               width: 0.8em;
               height: 0.8em;
-              fill: #fff;
+              fill: $primary-color;
               margin-right: 10px;
             }
           }
@@ -51,64 +48,51 @@
     form {
       width: 100%;
       .form-item {
-        label {
-          display: block;
-          color: #fff;
-        }
+        margin-bottom: 1em;
         textarea {
-          padding: 1em 0;
+          @include form-input;
           width: 100%;
           min-height: 140px;
-          border: 0;
-          border-bottom: 2px solid #fff;
           transition: 0.3s;
-          background-color: transparent;
-          color: #fff;
-          &:focus {
-            border-bottom: 3px solid #fff;
-            outline: none;
-          }
-          &::placeholder {
-            color: rgba(255, 255, 255, 0.568);
+        }
+        input,
+        select {
+          @include form-input;
+          width: 100%;
+          transition: 0.3s;
+        }
+        select {
+          color: $light-color;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          -o-appearence: none;
+          position: relative;
+          option {
+            color: $light-color;
           }
         }
         button {
           @include pr-btn;
           @include flexer(center, center);
-          margin-top: 2em;
+          color: #fff;
+          background-color: $primary-color;
           svg {
             width: 1em;
             height: 1em;
             margin-left: 10px;
-            fill: $primary-color;
+            fill: #fff;
           }
         }
       }
       .inline-form {
         @include full-flex;
         justify-content: space-between;
-        margin-bottom: 1em;
         .inline-item {
           width: 48%;
-          label {
-            display: block;
-            color: #fff;
-          }
           input {
+            @include form-input;
             width: 100%;
-            padding: 1em 0;
-            border: 0;
-            border-bottom: 2px solid #fff;
             transition: 0.3s;
-            background-color: transparent;
-            color: #fff;
-            &:focus {
-              border-bottom: 3px solid #fff;
-              outline: none;
-            }
-            &::placeholder {
-              color: rgba(255, 255, 255, 0.568);
-            }
           }
         }
       }

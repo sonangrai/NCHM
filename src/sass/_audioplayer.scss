@@ -1,0 +1,90 @@
+.audio__player {
+  margin-top: 2em;
+  @include full-flex;
+  justify-content: space-between;
+  align-items: center;
+  .speak {
+    width: 18%;
+    @include xxl {
+      width: 100%;
+    }
+    span {
+      color: $light-color;
+      font-size: 1.1em;
+      @include xxl {
+        display: block;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      @include sm {
+        font-size: 0.8em;
+      }
+    }
+  }
+  .audio__box {
+    width: 80%;
+    @include xxl {
+      width: 100%;
+    }
+    .controls {
+      @include full-flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        width: 18%;
+        border: 0;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+        svg {
+          width: 60px;
+          height: 60px;
+          fill: $primary-color;
+          @include sm {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        margin-right: 1em;
+        @include md {
+          margin-right: 0;
+        }
+        @include sm {
+          width: 10%;
+        }
+      }
+      .bar {
+        width: 80%;
+        flex-grow: 2;
+        @include full-flex;
+        justify-content: space-between;
+        align-items: center;
+        .bar__progress {
+          width: 70%;
+          .spectre {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #9696962e;
+            img {
+              display: block;
+              width: calc(100% / 7);
+              cursor: pointer;
+            }
+          }
+        }
+        .bar__time {
+          width: 10%;
+        }
+        span {
+          @include sm {
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}

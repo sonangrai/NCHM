@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import "./variables";
 @import "./mixins";
+@import "./common";
 @import "./layout/sidebar";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/main";
 @import "./page/home";
 @import "./page/contact";
+@import "./page/about";
+@import "./audioplayer";
 
 * {
   box-sizing: border-box;
