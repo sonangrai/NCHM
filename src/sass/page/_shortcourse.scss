@@ -2,6 +2,8 @@
   padding: 2em;
   .top__head {
     @include full-flex;
+    justify-content: space-between;
+    align-items: center;
     .title {
       h3 {
         color: $primary-color;
@@ -9,74 +11,107 @@
         margin-top: 0;
       }
     }
+    .srt__tabs {
+      ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          margin-left: 2em;
+          cursor: pointer;
+          &:first-child {
+            margin-left: 0;
+          }
+          .tab__item {
+            transition: 0.3s;
+            font-weight: 400;
+          }
+          .tab__item.active {
+            font-weight: 600;
+          }
+        }
+      }
+    }
   }
   .contents {
-    .course__row {
-      @include full-flex;
-      margin: 0 -0.5em;
-      .course__item {
-        margin: 0.5em;
-        width: calc((100% - 4em) / 4);
-        padding: 1em;
-        border-radius: 8px;
-        border: 1px solid #afcce8;
-        transition: 0.3s;
-        @include md {
-          width: calc((100% - 4em) / 3);
-        }
-        @include sm {
-          width: 100%;
-        }
-        &:hover {
-          background-color: $primary-color;
+    .tab__cont {
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s;
+      display: none;
+      .course__row {
+        @include full-flex;
+        margin: 0 -0.5em;
+        .course__item {
+          margin: 0.5em;
+          width: calc((100% - 4em) / 4);
+          padding: 1em;
+          border-radius: 8px;
+          border: 1px solid #afcce8;
+          transition: 0.3s;
+          @include md {
+            width: calc((100% - 4em) / 3);
+          }
+          @include sm {
+            width: 100%;
+          }
+          &:hover {
+            background-color: $primary-color;
+            a {
+              h3 {
+                color: #fff;
+              }
+              p {
+                color: #fff;
+              }
+              svg {
+                fill: #fff;
+              }
+            }
+            .sm__info {
+              svg {
+                fill: #fff;
+              }
+              span {
+                color: #fff;
+              }
+            }
+          }
           a {
+            display: block;
             h3 {
-              color: #fff;
+              color: $primary-color;
+              margin: 0;
             }
             p {
-              color: #fff;
-            }
-            svg {
-              fill: #fff;
-            }
-          }
-          .sm__info {
-            svg {
-              fill: #fff;
-            }
-            span {
-              color: #fff;
-            }
-          }
-        }
-        a {
-          display: block;
-          h3 {
-            color: $primary-color;
-            margin: 0;
-          }
-          p {
-            color: $primary-color;
-            font-size: 0.8em;
-          }
-          svg {
-            width: 50px;
-            height: 50px;
-            fill: $primary-color;
-          }
-          .sm__info {
-            @include flexer(flex-start, center);
-            svg {
-              width: 16px;
-              height: 16px;
-              margin-right: 6px;
-            }
-            span {
+              color: $primary-color;
               font-size: 0.8em;
+            }
+            svg {
+              width: 50px;
+              height: 50px;
+              fill: $primary-color;
+            }
+            .sm__info {
+              @include flexer(flex-start, center);
+              svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 6px;
+              }
+              span {
+                font-size: 0.8em;
+              }
             }
           }
         }
       }
+    }
+    .tab__cont.active {
+      display: block;
+      visibility: visible;
+      opacity: 1;
     }
   }
 }

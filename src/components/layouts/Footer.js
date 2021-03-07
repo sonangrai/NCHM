@@ -12,7 +12,7 @@ const Footer = () => {
     <>
       <div className="footer">
         <span>
-          Designed & Developed by{" "}
+          designed & Developed by{" "}
           <a target="_blank" href="https://www.thesunbi.com/" rel="noreferrer">
             SunBi
           </a>
