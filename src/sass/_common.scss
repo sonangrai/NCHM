@@ -67,3 +67,62 @@
   color: $primary-color;
   text-decoration: none;
 }
+
+//FOrms
+form {
+  width: 100%;
+  .form-item {
+    margin-bottom: 1em;
+    textarea {
+      @include form-input;
+      width: 100%;
+      min-height: 140px;
+      transition: 0.3s;
+    }
+    input,
+    select {
+      @include form-input;
+      width: 100%;
+      transition: 0.3s;
+    }
+    select {
+      color: $light-color;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearence: none;
+      position: relative;
+      option {
+        color: $light-color;
+      }
+    }
+    button {
+      @include pr-btn;
+      @include flexer(center, center);
+      color: #fff;
+      background-color: $primary-color;
+      svg {
+        width: 1em;
+        height: 1em;
+        margin-left: 10px;
+        fill: #fff;
+      }
+    }
+  }
+  .inline-form {
+    @include full-flex;
+    justify-content: space-between;
+    .inline-item {
+      width: 48%;
+      input {
+        @include form-input;
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+//Layout Fixer
+.mb-2 {
+  margin-bottom: 2em;
+}

@@ -37,6 +37,9 @@
             margin-left: 2em;
             width: 200px;
           }
+          @include sm {
+            width: 100%;
+          }
         }
         button {
           background-color: transparent;

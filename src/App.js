@@ -9,6 +9,7 @@ import Footer from "./components/layouts/Footer";
 import Contact from "./components/pages/Contact";
 import About from "./components/pages/About";
 import Careers from "./components/pages/Careers";
+import Login from "./components/pages/Login";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <div className="changable">
               <Switch>
                 <Route exact path="/" component={Home} />
+                <Route exact path="/login" component={Login} />
                 <Route exact path="/contacts" component={Contact} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/careers" component={Careers} />
