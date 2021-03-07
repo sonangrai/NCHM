@@ -4,6 +4,7 @@
   position: fixed;
   width: 80%;
   bottom: 0;
+  right: 0;
   height: 15vh;
   @include flexer(space-between, center);
   @include xl {

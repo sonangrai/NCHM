@@ -6,6 +6,7 @@
     position: fixed;
     z-index: 99;
     left: 0;
+    top: 0;
     transition: 0.3s;
     @include xl {
       width: 25%;
@@ -29,7 +30,11 @@
   .page__container {
     margin-left: 20%;
     .changable {
-      min-height: 75vh;
+      height: calc(75vh - 4em);
+      margin-top: 15vh;
+      @include sm {
+        margin-top: 0;
+      }
     }
     @include xl {
       margin-left: 25%;

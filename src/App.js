@@ -10,6 +10,7 @@ import Contact from "./components/pages/Contact";
 import About from "./components/pages/About";
 import Careers from "./components/pages/Careers";
 import Login from "./components/pages/Login";
+import ShortCourses from "./components/pages/ShortCourses";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
                 <Route exact path="/contacts" component={Contact} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/careers" component={Careers} />
+                <Route exact path="/short" component={ShortCourses} />
               </Switch>
             </div>
             <Footer />

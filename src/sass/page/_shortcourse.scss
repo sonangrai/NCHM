@@ -1,0 +1,82 @@
+.srt__course {
+  padding: 2em;
+  .top__head {
+    @include full-flex;
+    .title {
+      h3 {
+        color: $primary-color;
+        text-transform: uppercase;
+        margin-top: 0;
+      }
+    }
+  }
+  .contents {
+    .course__row {
+      @include full-flex;
+      margin: 0 -0.5em;
+      .course__item {
+        margin: 0.5em;
+        width: calc((100% - 4em) / 4);
+        padding: 1em;
+        border-radius: 8px;
+        border: 1px solid #afcce8;
+        transition: 0.3s;
+        @include md {
+          width: calc((100% - 4em) / 3);
+        }
+        @include sm {
+          width: 100%;
+        }
+        &:hover {
+          background-color: $primary-color;
+          a {
+            h3 {
+              color: #fff;
+            }
+            p {
+              color: #fff;
+            }
+            svg {
+              fill: #fff;
+            }
+          }
+          .sm__info {
+            svg {
+              fill: #fff;
+            }
+            span {
+              color: #fff;
+            }
+          }
+        }
+        a {
+          display: block;
+          h3 {
+            color: $primary-color;
+            margin: 0;
+          }
+          p {
+            color: $primary-color;
+            font-size: 0.8em;
+          }
+          svg {
+            width: 50px;
+            height: 50px;
+            fill: $primary-color;
+          }
+          .sm__info {
+            @include flexer(flex-start, center);
+            svg {
+              width: 16px;
+              height: 16px;
+              margin-right: 6px;
+            }
+            span {
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
