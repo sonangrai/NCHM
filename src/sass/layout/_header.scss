@@ -23,6 +23,10 @@
           color: #fff;
           border: 0;
           width: 300px;
+          font-size: 1em;
+          &::placeholder {
+            color: $light-color;
+          }
           @include lg {
             width: 240px;
           }
@@ -83,6 +87,20 @@
               color: #fff;
               @include md {
                 font-size: 0.8em;
+              }
+            }
+            a.active {
+              position: relative;
+              &:after {
+                position: absolute;
+                content: "";
+                width: 6px;
+                height: 6px;
+                background-color: #fff;
+                top: 110%;
+                left: 50%;
+                transform: translateY(-50%);
+                border-radius: 50%;
               }
             }
           }

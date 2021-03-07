@@ -11,7 +11,7 @@ const About = () => {
       </Helmet>
       <div className="about__pg">
         <div className="page__titles">
-          <h2>Inquiry Us</h2>
+          <h2>About Us</h2>
         </div>
         <div className="about__row">
           <div className="left__part">

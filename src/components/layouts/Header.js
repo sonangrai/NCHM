@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -8,7 +8,7 @@ const Header = () => {
         <div className="header__row">
           <div className="search">
             <form>
-              <input type="text" />
+              <input type="text" placeholder="Search Here" />
               <button type="submit">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -53,16 +53,18 @@ const Header = () => {
             <nav>
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <NavLink exact to="/">
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/careers">Careers</Link>
+                  <NavLink to="/careers">Careers</NavLink>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <NavLink to="/about">About</NavLink>
                 </li>
                 <li>
-                  <Link to="/contacts">Contacts</Link>
+                  <NavLink to="/contacts">Contacts</NavLink>
                 </li>
               </ul>
             </nav>

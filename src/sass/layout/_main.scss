@@ -11,7 +11,8 @@
       width: 25%;
     }
     @include lg {
-      left: -25%;
+      width: 40%;
+      left: -40%;
     }
     @include md {
       width: 40%;
