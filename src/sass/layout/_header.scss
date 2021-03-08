@@ -1,18 +1,10 @@
 .header {
   padding: 2em;
   background-color: $primary-color;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 80%;
-  @include xl {
-    width: 75%;
-  }
-  @include lg {
-    width: 100%;
-  }
+  z-index: 88;
+  height: 15vh;
   @include sm {
-    position: unset;
+    height: auto;
   }
   .header__row {
     @include flexer(space-between, center);
@@ -32,6 +24,9 @@
         padding: 0.8em;
         border-radius: 24px;
         background-color: $secondary-color;
+        @include sm {
+          padding: 0.4em;
+        }
         input {
           color: #fff;
           border: 0;

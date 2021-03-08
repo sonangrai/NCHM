@@ -19,6 +19,11 @@ const Sidebar = () => {
     });
   };
 
+  const closenav = (a) => {
+    document.querySelector(".mob__togg").classList.toggle("show");
+    setmenu(a);
+  };
+
   return (
     <>
       <aside className={menu}>
@@ -191,10 +196,10 @@ const Sidebar = () => {
             </Link>
           </div>
           <div className="nav">
-            <SidebarNav />
+            <SidebarNav closenav={closenav} />
           </div>
           <div className="auth__box">
-            <Link to="/login" className="sub__btn__outline">
+            <Link to="/login" className="sub__btn__outline" onClick={closenav}>
               Login
             </Link>
             <Link to="/register">Student Register | Signup</Link>

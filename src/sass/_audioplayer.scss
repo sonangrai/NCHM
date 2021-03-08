@@ -63,12 +63,14 @@
       }
       .bar {
         width: 80%;
+        height: 100%;
         flex-grow: 2;
         @include full-flex;
         justify-content: space-between;
         align-items: center;
         .bar__progress {
           width: 70%;
+          height: 20px;
           .spectre {
             display: flex;
             flex-wrap: wrap;
@@ -77,6 +79,7 @@
               display: block;
               width: calc(100% / 7);
               cursor: pointer;
+              height: 20px;
             }
           }
         }

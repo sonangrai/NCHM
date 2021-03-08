@@ -1,51 +1,46 @@
 .footer {
   padding: 2em;
   background-color: $secondary-color;
-  position: fixed;
-  width: 80%;
-  bottom: 0;
-  right: 0;
   height: 15vh;
+  z-index: 88;
   @include flexer(space-between, center);
-  @include xl {
-    width: 75%;
-  }
-  @include lg {
-    width: 100%;
-  }
   @include sm {
     justify-content: center;
     flex-direction: column-reverse;
   }
-  span {
-    display: block;
-    color: #fff;
-    @include sm {
-      width: 100%;
-      text-align: center;
-    }
-    a {
+  .cinfo {
+    span {
       color: #fff;
+      a {
+        color: #fff;
+      }
+      @include sm {
+        display: block;
+        margin-top: 0.4em;
+      }
     }
   }
-  span.not__open {
-    cursor: pointer;
-    position: relative;
-    padding-right: 1em;
-    padding: 0.5em 1.5em;
-    transition: 0.3s;
-    @include sm {
-      width: 100%;
+  .noticeclck {
+    @include md {
       text-align: center;
     }
-    &:after {
-      content: "+";
-      transform: rotate(0);
-      position: absolute;
-      right: 5%;
+    .not__open {
+      cursor: pointer;
+      position: relative;
+      padding-right: 1em;
+      padding: 0.5em 1.5em;
       transition: 0.3s;
+      color: #fff;
       @include sm {
-        right: 35%;
+        width: 100%;
+        text-align: center;
+      }
+      &:after {
+        content: "+";
+        transform: rotate(0);
+        position: absolute;
+        right: 5%;
+        transition: 0.3s;
       }
     }
     @include sm {
@@ -78,7 +73,7 @@
   height: calc(75vh - 20px);
   background-color: $white-blurred;
   padding: 20px;
-  z-index: 9;
+  z-index: 100;
   @include xl {
     width: 75vw;
   }

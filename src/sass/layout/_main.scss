@@ -28,12 +28,29 @@
     left: 0;
   }
   .page__container {
-    margin-left: 20%;
+    position: fixed;
+    width: 80%;
+    right: 0;
+    top: 0;
+    @include xl {
+      width: 75%;
+    }
+    @include lg {
+      width: 100%;
+    }
+    @include sm {
+      position: unset;
+    }
     .changable {
-      height: calc(75vh - 4em);
-      margin-top: 15vh;
+      height: calc(100vh - (2 * 15vh));
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      z-index: 77;
       @include sm {
         margin-top: 0;
+        overflow-y: auto;
+        height: auto;
+        min-height: 75vh;
       }
     }
     @include xl {

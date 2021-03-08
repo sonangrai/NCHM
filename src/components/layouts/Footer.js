@@ -11,15 +11,23 @@ const Footer = () => {
   return (
     <>
       <div className="footer">
-        <span>
-          designed & Developed by{" "}
-          <a target="_blank" href="https://www.thesunbi.com/" rel="noreferrer">
-            SunBi
-          </a>
-        </span>
-        <span onClick={notice} className="not__open">
-          Student Notice
-        </span>
+        <div className="cinfo">
+          <span>
+            designed & Developed by
+            <a
+              target="_blank"
+              href="https://www.thesunbi.com/"
+              rel="noreferrer"
+            >
+              SunBi
+            </a>
+          </span>
+        </div>
+        <div className="noticeclck">
+          <span onClick={notice} className="not__open">
+            Student Notice
+          </span>
+        </div>
       </div>
       <div className="float__notice" id="notice">
         <div className="flower">
