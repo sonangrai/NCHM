@@ -141,6 +141,7 @@ aside {
     position: absolute;
     left: 100%;
     top: 5%;
+    background-color: $dark-color;
     @include sm {
       top: 7%;
     }
@@ -167,6 +168,10 @@ aside {
     }
     @include lg {
       display: block;
+      top: 30px;
+    }
+    @include sm {
+      top: 25px;
     }
   }
   .mob__togg.show {

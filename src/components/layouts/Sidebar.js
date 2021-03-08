@@ -21,7 +21,11 @@ const Sidebar = () => {
 
   const closenav = (a) => {
     document.querySelector(".mob__togg").classList.toggle("show");
-    setmenu(a);
+    if (!a) {
+      setmenu(a);
+    } else {
+      setmenu("hidden");
+    }
   };
 
   return (
@@ -29,7 +33,7 @@ const Sidebar = () => {
       <aside className={menu}>
         <div className="top__aside">
           <div className="logo">
-            <Link to="/">
+            <Link to="/" onClick={closenav}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="130.72"

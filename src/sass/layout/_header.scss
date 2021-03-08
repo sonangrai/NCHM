@@ -5,6 +5,7 @@
   height: 15vh;
   @include sm {
     height: auto;
+    padding: 1em;
   }
   .header__row {
     @include flexer(space-between, center);
@@ -18,6 +19,8 @@
       @include sm {
         width: 100%;
         @include flexer(flex-end, center);
+        margin-left: 20%;
+        width: 80%;
       }
       form {
         @include flexer(center, center);

@@ -34,10 +34,19 @@ const Home = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     margin: 10,
-    autoPlay: true,
-    arrow: true,
+    autoplay: true,
+    arrows: true,
+    autoplaySpeed: 3000,
     nextArrow: <NextBtn />,
     prevArrow: <PreviousBtn />,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
   };
 
   return (
