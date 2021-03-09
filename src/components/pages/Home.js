@@ -34,7 +34,7 @@ const Home = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     margin: 10,
-    autoplay: true,
+    // autoplay: true,
     arrows: true,
     autoplaySpeed: 3000,
     nextArrow: <NextBtn />,
@@ -63,23 +63,13 @@ const Home = () => {
               </div>
               <div className="poster">
                 <div className="box__row">
-                  <div className="box__item">
-                    <img src={data.image} alt="" />
-                  </div>
-                  <div className="box__item">
-                    <img src={data.image} alt="" />
-                  </div>
-                  <div className="box__item">
-                    <img src={data.image} alt="" />
-                  </div>
-                  <div className="box__item">
-                    <img src={data.image} alt="" />
-                  </div>
-                  <div className="box__item">
-                    <img src={data.image} alt="" />
-                  </div>
-                  <div className="box__item not__empty">
-                    <span>Tourism</span>
+                  <div
+                    className="box__item"
+                    style={{ backgroundImage: `url(${data.image})` }}
+                  >
+                    <div className="not__empty">
+                      <span>Tourism</span>
+                    </div>
                   </div>
                 </div>
               </div>

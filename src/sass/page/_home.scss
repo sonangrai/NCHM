@@ -29,6 +29,16 @@
         border-radius: 18px;
         @include full-flex;
         justify-content: space-between;
+        position: relative;
+        &:after {
+          position: absolute;
+          content: "";
+          top: calc(50% - 10px);
+          background-color: $primary-color;
+          left: 0;
+          height: 10px;
+          width: 100%;
+        }
         @include sm {
           height: 40vh;
         }
@@ -36,36 +46,36 @@
           height: 30vh;
         }
         .box__item {
-          width: calc((100% / 3) - 10px);
+          height: 60vh;
+          width: 100%;
+          background-size: cover;
+          position: relative;
+          border-radius: 8px;
           overflow: hidden;
-          img {
+          .not__empty {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: calc(100% / 3);
+            height: calc(100% / 2);
+            background-color: #fff;
+            @include flexer(center, center);
+          }
+          &:after {
+            width: 10px;
             height: 100%;
-            object-fit: cover;
+            content: "";
+            position: absolute;
+            background-color: $primary-color;
+            left: calc(100% / 3);
           }
-          &:nth-child(-n + 3) {
-            margin-bottom: 10px;
-          }
-          &:nth-child(1) {
-            border-top-left-radius: 18px;
-          }
-          &:nth-child(3) {
-            border-top-right-radius: 18px;
-          }
-          &:nth-child(4) {
-            border-bottom-left-radius: 18px;
-          }
-          &:nth-child(6) {
-            border-bottom-right-radius: 18px;
-          }
-          @include sm {
-            width: calc((100% / 3) - 6px);
-          }
-        }
-        .not__empty {
-          background-color: #fff;
-          @include flexer(center, center);
-          span {
-            color: $primary-color;
+          &:before {
+            width: 10px;
+            height: 100%;
+            content: "";
+            position: absolute;
+            background-color: $primary-color;
+            right: calc(100% / 3);
           }
         }
       }

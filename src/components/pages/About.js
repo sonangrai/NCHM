@@ -40,7 +40,7 @@ const About = () => {
                 Faculty Members
               </Link>
               <Link to="" className="sub__btn__outline">
-                Mission| Vision
+                Mission | Vision
               </Link>
               <Link to="" className="sub__btn__outline">
                 FAQ's
