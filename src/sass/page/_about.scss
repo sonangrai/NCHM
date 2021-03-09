@@ -29,6 +29,20 @@
         a {
           display: block;
           margin-bottom: 1em;
+          @include flexer(flex-start, center);
+          transition: 0.3s;
+          &:hover {
+            svg {
+              transform: translateX(8px);
+            }
+          }
+          svg {
+            width: 1em;
+            height: 1em;
+            fill: $primary-color;
+            margin-left: 6px;
+            transition: 0.3s;
+          }
           &:last-child {
             margin-bottom: 0;
             @include md {

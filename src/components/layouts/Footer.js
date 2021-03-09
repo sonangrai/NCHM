@@ -13,12 +13,13 @@ const Footer = () => {
       <div className="footer">
         <div className="cinfo">
           <span>
-            designed & Developed by
+            design:
             <a
               target="_blank"
               href="https://www.thesunbi.com/"
               rel="noreferrer"
             >
+              {" "}
               SunBi
             </a>
           </span>
