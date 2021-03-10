@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 
 const Contact = () => {
+  const [data, setdata] = useState({
+    fullname: "",
+    email: "",
+    contact: "",
+    inquert: "",
+    message: "",
+  });
+
+  const { fullname, email, contact, inquert, message } = data;
+
+  const onchange = (e) => {
+    setdata({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+    console.log(data);
+  };
+
   return (
     <>
       <Helmet>
@@ -64,7 +83,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="right__cont">
-          <form>
+          <form onSubmit={submit}>
             <div className="form-item inline-form">
               <div className="inline-item">
                 <input
@@ -72,6 +91,8 @@ const Contact = () => {
                   name="fullname"
                   id="name"
                   placeholder="Full Name"
+                  value={fullname}
+                  onChange={onchange}
                 />
               </div>
               <div className="inline-item">
@@ -80,6 +101,8 @@ const Contact = () => {
                   name="email"
                   id="email"
                   placeholder="Email Address"
+                  value={email}
+                  onChange={onchange}
                 />
               </div>
             </div>
@@ -89,10 +112,12 @@ const Contact = () => {
                 name="contact"
                 id="name"
                 placeholder="Contact (Optional)"
+                value={contact}
+                onChange={onchange}
               />
             </div>
             <div className="form-item chev-parent">
-              <select name="query">
+              <select name="inquert" value={inquert} onChange={onchange}>
                 <option>Inquert Type</option>
                 <option>Ask</option>
                 <option>Business Query</option>
@@ -115,7 +140,12 @@ const Contact = () => {
               </i>
             </div>
             <div className="form-item">
-              <textarea name="message" placeholder="Message Here"></textarea>
+              <textarea
+                name="message"
+                placeholder="Message Here"
+                value={message}
+                onChange={onchange}
+              ></textarea>
             </div>
             <div className="form-item">
               <button type="submit">
