@@ -12,9 +12,13 @@ import Careers from "./components/pages/Careers";
 import Login from "./components/pages/Login";
 import ShortCourses from "./components/pages/ShortCourses";
 
+//Store Connect
+import store from "./store";
+import { Provider } from "react-redux";
+
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <Router>
         <Helmet>
           <title>NCHM</title>
@@ -37,7 +41,7 @@ function App() {
           </div>
         </div>
       </Router>
-    </>
+    </Provider>
   );
 }
 
