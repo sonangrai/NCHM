@@ -205,7 +205,7 @@ const Sidebar = ({ isAuthenticated }) => {
           <div className="nav">
             <SidebarNav closenav={closenav} />
           </div>
-          {isAuthenticated && (
+          {!isAuthenticated && (
             <div className="auth__box">
               <Link
                 to="/login"
