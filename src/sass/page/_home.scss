@@ -52,6 +52,9 @@
           position: relative;
           border-radius: 8px;
           overflow: hidden;
+          @include sm {
+            height: auto;
+          }
           .not__empty {
             position: absolute;
             bottom: 0;
