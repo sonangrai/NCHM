@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import Helmet from "react-helmet";
 
@@ -18,6 +18,22 @@ var settings = {
 };
 
 const Login = () => {
+  const [form, setform] = useState({
+    email: "",
+    password: "",
+  });
+
+  const { email, password } = form;
+
+  const onchange = (e) => {
+    setform({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const submit = (e) => {
+    e.preventDefault();
+    console.log(form);
+  };
+
   return (
     <>
       <Helmet>
@@ -2094,13 +2110,15 @@ const Login = () => {
             <h2>Log In</h2>
           </div>
           <p>* Only For the Students of NCHM</p>
-          <form>
+          <form onSubmit={submit}>
             <div className="form-item">
               <input
-                type="text"
-                name="registrationno"
+                type="email"
                 id="registrationno"
                 placeholder="Student Registration No"
+                name="email"
+                value={email}
+                onChange={onchange}
               />
             </div>
             <div className="form-item">
@@ -2109,6 +2127,8 @@ const Login = () => {
                 name="password"
                 id="password"
                 placeholder="Password"
+                value={password}
+                onChange={onchange}
               />
             </div>
             <div className="form-item">
