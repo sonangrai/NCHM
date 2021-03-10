@@ -5,6 +5,10 @@ import Helmet from "react-helmet";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { connect } from "react-redux";
+import { login } from "../../actions/auth";
+import Toast from "../layouts/Toast";
+
 var settings = {
   infinite: true,
   speed: 500,
@@ -17,7 +21,7 @@ var settings = {
   dots: true,
 };
 
-const Login = () => {
+const Login = ({ login }) => {
   const [form, setform] = useState({
     email: "",
     password: "",
@@ -31,7 +35,7 @@ const Login = () => {
 
   const submit = (e) => {
     e.preventDefault();
-    console.log(form);
+    login(form);
   };
 
   return (
@@ -2137,8 +2141,13 @@ const Login = () => {
           </form>
         </div>
       </div>
+      <Toast />
     </>
   );
 };
 
-export default Login;
+const mapStateToProps = (state) => ({
+  state: state,
+});
+
+export default connect(mapStateToProps, { login })(Login);
