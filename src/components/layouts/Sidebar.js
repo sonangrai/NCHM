@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import SidebarNav from "./SidebarNav";
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+//Connecting to store
+import { connect } from "react-redux";
+
+const Sidebar = ({ isAuthenticated }) => {
   let date = new Date();
 
   const [menu, setmenu] = useState("hidden");
@@ -202,12 +205,18 @@ const Sidebar = () => {
           <div className="nav">
             <SidebarNav closenav={closenav} />
           </div>
-          <div className="auth__box">
-            <Link to="/login" className="sub__btn__outline" onClick={closenav}>
-              Login
-            </Link>
-            <Link to="/register">Student Register | Signup</Link>
-          </div>
+          {isAuthenticated && (
+            <div className="auth__box">
+              <Link
+                to="/login"
+                className="sub__btn__outline"
+                onClick={closenav}
+              >
+                Login
+              </Link>
+              <Link to="/register">Student Register | Signup</Link>
+            </div>
+          )}
         </div>
         <div className="bottom__aside">
           <div className="wrap">
@@ -330,4 +339,8 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
+
+export default connect(mapStateToProps)(Sidebar);
