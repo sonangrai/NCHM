@@ -145,4 +145,7 @@ form {
   .alert.success {
     background-color: green;
   }
+  .alert.info {
+    background-color: $primary-color;
+  }
 }

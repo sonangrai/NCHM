@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+import { connect } from "react-redux";
+import { contactus } from "../../actions/auth";
+import Toast from "../layouts/Toast";
 
-const Contact = () => {
+const Contact = ({ contactus }) => {
   const [data, setdata] = useState({
     fullname: "",
     email: "",
@@ -18,7 +21,7 @@ const Contact = () => {
 
   const submit = (e) => {
     e.preventDefault();
-    console.log(data);
+    contactus(data);
   };
 
   return (
@@ -169,8 +172,13 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <Toast />
     </>
   );
 };
 
-export default Contact;
+const mapStateToProps = (state) => ({
+  state: state,
+});
+
+export default connect(mapStateToProps, { contactus })(Contact);
