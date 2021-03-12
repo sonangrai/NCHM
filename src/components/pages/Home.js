@@ -12,19 +12,19 @@ const Home = () => {
       title: "Courses",
       desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
       image:
-        "https://cdn.pixabay.com/photo/2020/04/04/16/07/stadttheater-5002861_1280.jpg",
+        "https://cdn.pixabay.com/photo/2021/03/02/12/20/mountains-6062271_1280.jpg",
     },
     {
       title: "Study With Us",
       desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
       image:
-        "https://cdn.pixabay.com/photo/2021/01/05/06/40/boat-5889919_1280.png",
+        "https://cdn.pixabay.com/photo/2021/03/04/07/31/mountains-6067150_1280.jpg",
     },
     {
       title: "International",
       desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
       image:
-        "https://cdn.pixabay.com/photo/2020/06/24/10/51/roses-5335743_1280.jpg",
+        "https://cdn.pixabay.com/photo/2021/03/02/12/20/mountains-6062271_1280.jpg",
     },
   ];
 
